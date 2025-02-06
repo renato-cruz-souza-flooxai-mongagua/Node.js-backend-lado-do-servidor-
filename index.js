@@ -11,7 +11,22 @@ let server = https.createServer((req, res)=>{
         res.setHeader('content-type', 'text/html')
         res.end('<h1>Olá</h1>');
 
-        break
+        break;
+
+        case '/Users':
+
+        res.statusCode = 200;
+        res.setHeader('content-type', 'application/json')
+        res.end(JSON.stringify({
+            users: [{
+                name:'Hcode',
+                email:'contato@hcode.com.br',
+                id:1
+            }]
+        }));
+
+        break;
+
     }
 })
 
