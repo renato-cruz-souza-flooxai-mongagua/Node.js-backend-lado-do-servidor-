@@ -1,7 +1,7 @@
 let NeDB = require('nedb');
 let db = new NeDB({
-    filename: 'users.db', // Definindo o arquivo do banco de dados
-    
+    filename: 'users.db', 
+    autoload: true         
 });
 
 module.exports = app => {
